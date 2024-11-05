@@ -17,11 +17,11 @@ professions = ["Blacksmith", "Farmer", "Merchant", "Guard", "Scholar", "Thief", 
 hometowns = ["Rivertown", "Eagle's Nest", "Sunfield", "Mystic Falls", "Stormhold", "Whiterun", "Greenshire", "Ironforge"]
 ```
 
-These made it a lot easier, and possible for me, to make a pseudo random generator for things like names and projessions.
+These made it a lot easier, and possible for me, to make a pseudo random generator for things like names and professions.
 
 #### The "generate_npcs" Function
 
-The def feature was perhaps the most helpful in coding my project, it made the whole thing efficient to code. 
+The def feature was perhaps the most helpful in coding my project, it made the whole thing efficient to code, because I could use custom functions specialized to the task at hand.
 
 ```
 def generate_npcs(num_npcs):
@@ -40,7 +40,7 @@ def generate_npcs(num_npcs):
     return npcs
 ```
 
-In short, this function searches the lists for a random choice out of them to return to the user, such as the NPC's professions and heights.
+In short, this function searches the lists **already created** for a random choice out of them to return to the user, such as the NPC's professions and heights.
 
 ```
 def print_npcs(npcs):
@@ -55,4 +55,18 @@ def print_npcs(npcs):
         print()
 ```
 
-This function helped the user interface be more dynamic, with "f floats" helping to plug in the random information found through the other functions.
+This function helped the user interface be more dynamic, with "f floats" plugging in the random information found through the other functions.
+
+## Conclusion
+
+My "NPC Generator" has many uses for potential users. I intentionally made this program so that others could build off and use it for their own purposes. Things such as the lists are almost infinitely changeable, because the user can alter the lists for the functions to call upon whatever they wish. 
+
+Effortless Creativity: Generate a vast array of NPCs, each with unique traits, backstories, and personalities.
+
+Tailor-Made Characters: Customize your NPCs to fit any narrative or environment with ease.
+
+Time-Saver Extraordinaire: Spend less time on character creation and more on crafting epic stories and gameplay.
+
+Limitless Variety: From quirky shopkeepers to formidable foes, NPC-Forge ensures no two characters are alike
+
+*Have fun with my program!*
