@@ -1,44 +1,37 @@
-# NPC Generator for an Open-World Video Game
-
 import random
-import time
-import math
 
-# Function to generate NPCs
+# Lists of potential names, professions, and hometowns for NPCs
+names = ["Alex", "Jamie", "Jordan", "Taylor", "Morgan", "Casey", "Riley", "Cameron", "Dakota", "Quinn"]
+professions = ["Blacksmith", "Farmer", "Merchant", "Guard", "Scholar", "Thief", "Baker", "Fisherman", "Carpenter", "Healer"]
+hometowns = ["Rivertown", "Eagle's Nest", "Sunfield", "Mystic Falls", "Stormhold", "Whiterun", "Greenshire", "Ironforge"]
+
 def generate_npcs(num_npcs):
-    npc_list = []
+    npcs = []
     
-    # Prompt user for NPC names
-    npc_names = input("Enter names for the NPCs, separated by commas: ").split(',')
-    
-    # Loop to create NPCs
-    for i in range(num_npcs):
-        name = npc_names[i % len(npc_names)].strip()  # Use names provided by user
-        age = random.randint(18, 65)  # Random age between 18 and 65
-        height = round(random.uniform(1.5, 2.0), 2)  # Random height in meters
-        is_villain = random.choice([True, False])  # Random boolean for villain status
-        profession = random.choice(['Warrior', 'Mage', 'Thief', 'Merchant', 'Healer'])  # Random profession
-        
-        # Create NPC dictionary
+    for _ in range(num_npcs):
         npc = {
-            'Name': name,
-            'Age': age,
-            'Height (m)': height,
-            'Is Villain': is_villain,
-            'Profession': profession
+            "name": random.choice(names),
+            "age": random.randint(18, 70),  # age between 18 and 70
+            "height": round(random.uniform(150, 200), 1),  # height in cm as a float
+            "is_friendly": random.choice([True, False]),  # boolean for friendliness
+            "profession": random.choice(professions),
+            "hometown": random.choice(hometowns)
         }
-        
-        npc_list.append(npc)  # Add NPC to the list
-    
-    return npc_list
+        npcs.append(npc)
+    return npcs
 
-# Function to display NPCs
-def display_npcs(npcs):
-    for npc in npcs:
-        print(f"Name: {npc['Name']}, Age: {npc['Age']}, Height: {npc['Height (m)']}m, Is Villain: {npc['Is Villain']}, Profession: {npc['Profession']}")
+def print_npcs(npcs):
+    for idx, npc in enumerate(npcs):
+        print(f"NPC {idx + 1}:")
+        print(f"  Name: {npc['name']}")
+        print(f"  Age: {npc['age']}")
+        print(f"  Height: {npc['height']} cm")
+        print(f"  Friendly: {'Yes' if npc['is_friendly'] else 'No'}")
+        print(f"  Profession: {npc['profession']}")
+        print(f"  Hometown: {npc['hometown']}")
+        print()
 
-# Main execution
-if __name__ == "__main__":
-    num_npcs = 10  # Number of NPCs to generate
-    npcs = generate_npcs(num_npcs)  # Generate NPCs
-    display_npcs(npcs)  # Display NPCs
+# Main program execution
+num_npcs = int(input("Enter the number of NPCs to generate: "))
+npcs = generate_npcs(num_npcs)
+print_npcs(npcs)
