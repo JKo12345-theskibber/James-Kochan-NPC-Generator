@@ -67,6 +67,6 @@ Tailor-Made Characters: Customize your NPCs to fit any narrative or environment 
 
 Time-Saver Extraordinaire: Spend less time on character creation and more on crafting epic stories and gameplay.
 
-Limitless Variety: From quirky shopkeepers to formidable foes, NPC-Forge ensures no two characters are alike
+Limitless Variety: From quirky shopkeepers to formidable foes, NPC Generator ensures no two characters are alike
 
 *Have fun with my program!*
